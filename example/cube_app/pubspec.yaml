@@ -74,6 +74,9 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/cube/cube.obj
-    - assets/cube/cube.mtl
-    - assets/cube/flutter.png
+  #  - assets/cube/cube.obj
+  # - assets/cube/cube.mtl
+    # - assets/cube/flutter.png
+    - assets/beer/beer.obj
+    - assets/beer/Beer.mtl
+    - assets/beer/Beer_BaseColor.png

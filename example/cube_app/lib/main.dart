@@ -2,17 +2,22 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_cube/flutter_cube.dart';
 
+import 'package:flutter/services.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    /*** 
     return MaterialApp(
       title: 'Flutter Cube',
       theme: ThemeData.dark(),
-      home: MyHomePage(title: 'Flutter Cube Home Page'),
+      home: MyHomePage(title: 'Démo Cube'),
     );
+  ****/
+    return MyHomePage(title: 'Démo Cube');
   }
 }
 
@@ -25,17 +30,24 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   Scene _scene;
   Object _cube;
   AnimationController _controller;
 
   void _onSceneCreated(Scene scene) {
     _scene = scene;
-    scene.camera.position.z = 50;
-    _cube = Object(scale: Vector3(2.0, 2.0, 2.0), backfaceCulling: false, fileName: 'assets/cube/cube.obj');
-    final int samples = 100;
-    final double radius = 8;
+    // scene.camera.position.z = 50;
+    scene.camera.position.z = 6;  // FIrst value was 10
+    _cube = Object(
+        scale: Vector3(2.0, 2.0, 2.0),
+        backfaceCulling: false,
+        // fileName: 'assets/cube/cube.obj');
+        fileName: 'assets/beer/beer.obj');
+    final int samples = 4; // Initial value 100
+    // final double radius = 8;
+    final double radius = 2;
     final double offset = 2 / samples;
     final double increment = pi * (3 - sqrt(5));
     for (var i = 0; i < samples; i++) {
@@ -46,7 +58,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       final z = sin(phi) * r;
       final Object cube = Object(
         position: Vector3(x, y, z)..scale(radius),
-        fileName: 'assets/cube/cube.obj',
+        fileName: 'assets/beer/beer.obj',
+        // fileName: 'assets/cube/cube.obj',
       );
       _cube.add(cube);
     }
@@ -56,7 +69,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(duration: Duration(milliseconds: 30000), vsync: this)
+    _controller = AnimationController(
+        duration: Duration(milliseconds: 30000), vsync: this)
       ..addListener(() {
         if (_cube != null) {
           _cube.rotation.y = _controller.value * 360;
@@ -75,6 +89,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    /*** 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -83,6 +99,12 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         child: Cube(
           onSceneCreated: _onSceneCreated,
         ),
+      ),
+    );
+  ***/
+    return Center(
+      child: Cube(
+        onSceneCreated: _onSceneCreated,
       ),
     );
   }

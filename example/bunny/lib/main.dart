@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Cube',
       theme: ThemeData.dark(),
-      home: MyHomePage(title: 'Flutter Cube Home Page'),
+      home: MyHomePage(title: 'Demo Cube'),
     );
   }
 }
@@ -35,9 +35,11 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   void _onSceneCreated(Scene scene) {
     _scene = scene;
     scene.camera.position.z = 10;
-    scene.light.position.setFrom(Vector3(0, 10, 10));
-    scene.light.setColor(Colors.white, _ambient, _diffuse, _specular);
-    _bunny = Object(position: Vector3(0, -1.0, 0), scale: Vector3(10.0, 10.0, 10.0), lighting: true, fileName: 'assets/bunny/bunny.obj');
+    // scene.light.position.setFrom(Vector3(0, 10, 10));
+    // scene.light.setColor(Colors.white, _ambient, _diffuse, _specular);
+    // _bunny = Object(position: Vector3(0, -1.0, 0), scale: Vector3(10.0, 10.0, 10.0), lighting: true, fileName: 'assets/bunny/bunny.obj');
+     _bunny = Object(position: Vector3(0, -1.0, 0), scale: Vector3(10.0, 10.0, 10.0), fileName: 'assets/bunny/bunny.obj');
+
     scene.world.add(_bunny);
   }
 
@@ -87,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                       onChanged: (value) {
                         setState(() {
                           _diffuse = value;
-                          _scene.light.setColor(Colors.white, _ambient, _diffuse, _specular);
+                          // _scene.light.setColor(Colors.white, _ambient, _diffuse, _specular);
                         });
                       },
                     ),
@@ -108,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                       onChanged: (value) {
                         setState(() {
                           _specular = value;
-                          _scene.light.setColor(Colors.white, _ambient, _diffuse, _specular);
+                          // _scene.light.setColor(Colors.white, _ambient, _diffuse, _specular);
                         });
                       },
                     ),
@@ -129,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                       onChanged: (value) {
                         setState(() {
                           _shininess = value;
-                          _bunny.mesh.material.shininess = _shininess;
+                          // _bunny.mesh.material.shininess = _shininess;
                         });
                       },
                     ),
