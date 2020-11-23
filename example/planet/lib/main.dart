@@ -46,8 +46,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
     // create by code
     _earth = Object(name: 'earth', scale: Vector3(10.0, 10.0, 10.0));
-    generateSphereObject(_earth, 'surface', 0.485, true, 'assets/earth/4096_earth.jpg');
-    generateSphereObject(_earth, 'clouds', 0.5, true, 'assets/earth/4096_clouds.png');
+    generateSphereObject(_earth, 'surface', 0.485, true, 'assets/earth/2048_earth.jpg');
+    generateSphereObject(_earth, 'clouds', 0.5, true, 'assets/earth/2048_clouds.png');
     _scene.world.add(_earth);
 
     // texture from https://www.solarsystemscope.com/textures/
