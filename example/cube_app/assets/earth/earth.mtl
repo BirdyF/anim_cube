@@ -12,11 +12,11 @@ newmtl 01___Default
 	Kd 0.0000 0.0000 0.0000
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka 4096_earth.jpg
-	map_Kd 4096_earth.jpg
-	map_Ke 4096_night_lights.jpg
-	map_bump 4096_bump.jpg
-	bump 4096_bump.jpg
+	map_Ka 2048_earth.jpg
+	map_Kd 2048_earth.jpg
+	map_Ke 2048_night_lights.jpg
+	map_bump 2048_bump.jpg
+	bump 2048_bump.jpg
 
 newmtl 02___Default
 	Ns 10.0000
@@ -29,6 +29,6 @@ newmtl 02___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka 4096_clouds.png
-	map_Kd 4096_clouds.png
-	map_d 4096_clouds.png
+	map_Ka 2048_clouds.png
+	map_Kd 2048_clouds.png
+	map_d 2048_clouds.png
