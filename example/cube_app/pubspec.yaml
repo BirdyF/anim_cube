@@ -83,9 +83,9 @@ flutter:
 
     - assets/earth/earth.obj
     - assets/earth/earth.mtl
-    - assets/earth/4096_bump.jpg
-    - assets/earth/4096_clouds.jpg
-    - assets/earth/4096_clouds.png
-    - assets/earth/4096_earth.jpg
-    - assets/earth/4096_night_lights.jpg
-    - assets/earth/4096_normal.jpg
+    - assets/earth/2048_bump.jpg
+    - assets/earth/2048_clouds.jpg
+    - assets/earth/2048_clouds.png
+    - assets/earth/2048_earth.jpg
+    - assets/earth/2048_night_lights.jpg
+    - assets/earth/2048_normal.jpg
