@@ -39,13 +39,17 @@ class _MyHomePageState extends State<MyHomePage>
   void _onSceneCreated(Scene scene) {
     _scene = scene;
     // scene.camera.position.z = 50;
-    scene.camera.position.z = 6;  // FIrst value was 10
+    scene.camera.position.z = 6; // FIrst value was 10
     _cube = Object(
-        scale: Vector3(2.0, 2.0, 2.0),
+        // scale: Vector3(2.0, 2.0, 2.0),
+        scale: Vector3(4.0, 4.0, 4.0),
         backfaceCulling: false,
         // fileName: 'assets/cube/cube.obj');
-        fileName: 'assets/beer/beer.obj');
-    final int samples = 4; // Initial value 100
+        // fileName: 'assets/beer/beer.obj');
+        fileName: 'assets/earth/earth.obj');
+    // final int samples = 4; // Initial value 100
+    final int samples = 0; // Initial value 100
+    // To get only one object
     // final double radius = 8;
     final double radius = 2;
     final double offset = 2 / samples;
@@ -58,8 +62,9 @@ class _MyHomePageState extends State<MyHomePage>
       final z = sin(phi) * r;
       final Object cube = Object(
         position: Vector3(x, y, z)..scale(radius),
-        fileName: 'assets/beer/beer.obj',
+        // fileName: 'assets/beer/beer.obj',
         // fileName: 'assets/cube/cube.obj',
+        fileName: 'assets/earth/earth.obj',
       );
       _cube.add(cube);
     }

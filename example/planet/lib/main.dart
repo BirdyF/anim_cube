@@ -60,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   void initState() {
     super.initState();
     _controller = AnimationController(duration: Duration(milliseconds: 30000), vsync: this)
+    
       ..addListener(() {
         if (_earth != null) {
           _earth.rotation.y = _controller.value * 360;

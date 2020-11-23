@@ -80,3 +80,12 @@ flutter:
     - assets/beer/beer.obj
     - assets/beer/Beer.mtl
     - assets/beer/Beer_BaseColor.png
+
+    - assets/earth/earth.obj
+    - assets/earth/earth.mtl
+    - assets/earth/4096_bump.jpg
+    - assets/earth/4096_clouds.jpg
+    - assets/earth/4096_clouds.png
+    - assets/earth/4096_earth.jpg
+    - assets/earth/4096_night_lights.jpg
+    - assets/earth/4096_normal.jpg
